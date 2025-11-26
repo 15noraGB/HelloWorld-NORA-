@@ -16,6 +16,8 @@ class birthdayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        texto1.text = "Felicidades!"
+        texto2.text = "Disfruta del día"
 
         // Do any additional setup after loading the view.
     }
