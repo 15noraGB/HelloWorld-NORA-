@@ -30,6 +30,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="HelloWorld"/>
+                                <connections>
+                                    <action selector="botonHelloWorld:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dPy-rJ-3g7"/>
+                                    <action selector="botonHelloWorldSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ADy-30-QEQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY6-yc-bpj">
                                 <rect key="frame" x="50" y="321" width="292" height="35"/>
@@ -50,11 +54,57 @@
                     <navigationItem key="navigationItem" id="IEH-TH-9RQ"/>
                     <connections>
                         <segue destination="Crg-dk-HRl" kind="show" identifier="birthdaySegue" id="1ce-Lt-hf3"/>
+                        <segue destination="3bB-JT-YiB" kind="show" identifier="helloWorldSegue" id="8u4-yd-rJp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1040.4580152671756" y="122.53521126760565"/>
+        </scene>
+        <!--Edit Text View Controller-->
+        <scene sceneID="gvl-DH-JsV">
+            <objects>
+                <viewController id="3bB-JT-YiB" customClass="editTextViewController" customModule="HelloWorld_NORA_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8DM-XW-HEW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swI-wj-Z1T">
+                                <rect key="frame" x="175" y="172" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bug-3Y-zUO">
+                                <rect key="frame" x="35" y="234" width="321" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZr-4t-mRi">
+                                <rect key="frame" x="133" y="300" width="126" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="DONE"/>
+                                <connections>
+                                    <action selector="botonDONE:" destination="3bB-JT-YiB" eventType="touchUpInside" id="QrV-iI-cnN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SNk-cI-fDu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9E4-WE-klX"/>
+                    <connections>
+                        <outlet property="text1" destination="swI-wj-Z1T" id="G86-IH-boq"/>
+                        <outlet property="textField" destination="swI-wj-Z1T" id="V38-Pp-jGJ"/>
+                        <outlet property="textFill" destination="bug-3Y-zUO" id="iuL-RR-wFU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kze-Ul-ALq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038.9312977099237" y="908.45070422535218"/>
         </scene>
         <!--Birthday View Controller-->
         <scene sceneID="Ivf-vr-kZW">
