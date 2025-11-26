@@ -8,7 +8,12 @@
 import UIKit
 
 class birthdayViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var fotoTarta: UIImageView!
+    @IBOutlet weak var texto1: UILabel!
+    @IBOutlet weak var texto2: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

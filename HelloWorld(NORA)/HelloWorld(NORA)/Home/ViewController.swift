@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     let NetworkSegue = "networkSegue"
 
     @IBAction func botonCumple(_ sender: UIButton) {
-        self.shouldPerformSegue(withIdentifier: BirthdaySegue, sender: self)
+        self.performSegue(withIdentifier: BirthdaySegue, sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

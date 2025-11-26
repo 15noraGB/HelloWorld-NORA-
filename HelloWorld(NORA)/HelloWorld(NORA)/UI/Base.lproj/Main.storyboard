@@ -63,14 +63,43 @@
                     <view key="view" contentMode="scaleToFill" id="RFa-Ow-2XD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdj-vf-UDb">
+                                <rect key="frame" x="76" y="223" width="240" height="234"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Felicidades!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28Q-o3-pXs">
+                                <rect key="frame" x="112" y="491" width="168" height="55"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disfruta del día" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGF-9g-1XD">
+                                <rect key="frame" x="149" y="554" width="95" height="28"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fwp-1B-WUm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JGF-9g-1XD" firstAttribute="centerX" secondItem="wdj-vf-UDb" secondAttribute="centerX" id="6zg-up-xdX"/>
+                            <constraint firstItem="JGF-9g-1XD" firstAttribute="top" secondItem="28Q-o3-pXs" secondAttribute="bottom" constant="8" id="Sad-IE-6nX"/>
+                            <constraint firstItem="JGF-9g-1XD" firstAttribute="centerX" secondItem="RFa-Ow-2XD" secondAttribute="centerX" id="UDo-eL-OkU"/>
+                            <constraint firstItem="fwp-1B-WUm" firstAttribute="bottom" secondItem="JGF-9g-1XD" secondAttribute="bottom" constant="202" id="WSR-kr-0hr"/>
+                            <constraint firstItem="JGF-9g-1XD" firstAttribute="centerX" secondItem="28Q-o3-pXs" secondAttribute="centerX" id="giM-BL-ZSJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S84-2K-9J8"/>
+                    <connections>
+                        <outlet property="fotoTarta" destination="wdj-vf-UDb" id="9rs-2A-8tj"/>
+                        <outlet property="texto1" destination="28Q-o3-pXs" id="d0K-bc-XE8"/>
+                        <outlet property="texto2" destination="JGF-9g-1XD" id="Q8e-GY-TyC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mmq-ge-ANc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="123"/>
+            <point key="canvasLocation" x="1823.6641221374045" y="122.53521126760565"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y8H-L4-QP7">
