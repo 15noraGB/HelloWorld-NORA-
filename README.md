@@ -1,2 +1,0 @@
-# HelloWorld-NORA-
-Ejercicio HelloWorld
