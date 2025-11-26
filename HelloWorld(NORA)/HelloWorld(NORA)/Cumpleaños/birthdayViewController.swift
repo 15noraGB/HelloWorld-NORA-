@@ -18,6 +18,12 @@ class birthdayViewController: UIViewController {
         super.viewDidLoad()
         texto1.text = "Felicidades!"
         texto2.text = "Disfruta del día"
+        let backgroundImage = UIImageView(frame: view.bounds)
+           backgroundImage.image = UIImage(named: "fondoCumple")   // tu imagen en Assets
+           backgroundImage.contentMode = .scaleAspectFill
+           backgroundImage.clipsToBounds = true
+
+           view.insertSubview(backgroundImage, at: 0)
 
         // Do any additional setup after loading the view.
     }
