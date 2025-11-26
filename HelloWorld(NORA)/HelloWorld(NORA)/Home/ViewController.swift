@@ -8,7 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let BirthdaySegue = "birthdaySegue"
+    let HelloWorldSegue = "helloWorldSegue"
+    let ShopListSegue = "shopListSegue"
+    let NetworkSegue = "networkSegue"
 
+    @IBAction func botonCumple(_ sender: UIButton) {
+        self.shouldPerformSegue(withIdentifier: BirthdaySegue, sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
