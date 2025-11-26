@@ -49,7 +49,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="IEH-TH-9RQ"/>
                     <connections>
-                        <segue destination="Crg-dk-HRl" kind="show" id="1ce-Lt-hf3"/>
+                        <segue destination="Crg-dk-HRl" kind="show" identifier="birthdaySegue" id="1ce-Lt-hf3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
