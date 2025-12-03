@@ -100,11 +100,41 @@
                         <outlet property="text1" destination="swI-wj-Z1T" id="G86-IH-boq"/>
                         <outlet property="textField" destination="swI-wj-Z1T" id="V38-Pp-jGJ"/>
                         <outlet property="textFill" destination="bug-3Y-zUO" id="iuL-RR-wFU"/>
+                        <segue destination="mAi-ff-ghW" kind="show" identifier="resultTextSegue" id="vaa-h7-ggw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kze-Ul-ALq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1038.9312977099237" y="908.45070422535218"/>
+        </scene>
+        <!--ResultViewController-->
+        <scene sceneID="ers-E7-WU1">
+            <objects>
+                <viewController title="ResultViewController" id="mAi-ff-ghW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sfS-0I-5b1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rA-aq-L5o">
+                                <rect key="frame" x="65" y="198" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="foto_gato" translatesAutoresizingMaskIntoConstraints="NO" id="Qno-9M-iQS">
+                                <rect key="frame" x="65" y="257" width="276" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XtB-ig-A5H"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Njr-g8-G9p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ie7-xb-fZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797.709923664122" y="907.74647887323943"/>
         </scene>
         <!--Birthday View Controller-->
         <scene sceneID="Ivf-vr-kZW">
@@ -177,6 +207,7 @@
     </scenes>
     <resources>
         <image name="fotoTarta" width="2499" height="3334"/>
+        <image name="foto_gato" width="800" height="480"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

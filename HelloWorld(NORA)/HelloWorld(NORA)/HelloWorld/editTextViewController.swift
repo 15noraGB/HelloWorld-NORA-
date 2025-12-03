@@ -14,6 +14,8 @@ class editTextViewController: UIViewController {
     @IBAction func botonDONE(_ sender: UIButton) {
     }
     
+    let ResultText = "resultTextSegue"
+    
     override func viewDidLoad() {
         text1.text = "Introduce tu nombre"
         super.viewDidLoad()
