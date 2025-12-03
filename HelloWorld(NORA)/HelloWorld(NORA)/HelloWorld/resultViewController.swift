@@ -1,22 +1,26 @@
 //
-//  resultTextViewController.swift
+//  resultViewController.swift
 //  HelloWorld(NORA)
 //
-//  Created by student on 26/11/25.
+//  Created by student on 3/12/25.
 //
 
 import UIKit
 
-class resultTextViewController: UIViewController {
+class resultViewController: UIViewController {
+    
+    @IBOutlet weak var texto1: UILabel!
+    
+    @IBOutlet weak var image: UIImageView!
+    var nombre: String?
     
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        texto1.text = "Holis! Bienvenido a mi app"
 
         // Do any additional setup after loading the view.
     }
-    
     
 
     /*

@@ -31,8 +31,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="HelloWorld"/>
                                 <connections>
-                                    <action selector="botonHelloWorld:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dPy-rJ-3g7"/>
-                                    <action selector="botonHelloWorldSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ADy-30-QEQ"/>
+                                    <action selector="botonHelloWorld:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0s4-Va-R1F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY6-yc-bpj">
@@ -54,7 +53,7 @@
                     <navigationItem key="navigationItem" id="IEH-TH-9RQ"/>
                     <connections>
                         <segue destination="Crg-dk-HRl" kind="show" identifier="birthdaySegue" id="1ce-Lt-hf3"/>
-                        <segue destination="3bB-JT-YiB" kind="show" identifier="helloWorldSegue" id="8u4-yd-rJp"/>
+                        <segue destination="3bB-JT-YiB" kind="show" identifier="helloWorldSegue" id="P3h-00-6TS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,7 +99,7 @@
                         <outlet property="text1" destination="swI-wj-Z1T" id="G86-IH-boq"/>
                         <outlet property="textField" destination="swI-wj-Z1T" id="V38-Pp-jGJ"/>
                         <outlet property="textFill" destination="bug-3Y-zUO" id="iuL-RR-wFU"/>
-                        <segue destination="mAi-ff-ghW" kind="show" identifier="resultTextSegue" id="vaa-h7-ggw"/>
+                        <segue destination="DrF-GU-xMp" kind="show" identifier="resultTextSegue" id="wTH-oO-QKg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kze-Ul-ALq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -108,33 +107,37 @@
             <point key="canvasLocation" x="1038.9312977099237" y="908.45070422535218"/>
         </scene>
         <!--ResultViewController-->
-        <scene sceneID="ers-E7-WU1">
+        <scene sceneID="snv-uH-s2h">
             <objects>
-                <viewController title="ResultViewController" id="mAi-ff-ghW" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sfS-0I-5b1">
+                <viewController title="ResultViewController" id="DrF-GU-xMp" customClass="resultViewController" customModule="HelloWorld_NORA_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aJN-Mb-n5a">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rA-aq-L5o">
-                                <rect key="frame" x="65" y="198" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiZ-Jk-mNL">
+                                <rect key="frame" x="93" y="239" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="foto_gato" translatesAutoresizingMaskIntoConstraints="NO" id="Qno-9M-iQS">
-                                <rect key="frame" x="65" y="257" width="276" height="202"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="foto_gato" translatesAutoresizingMaskIntoConstraints="NO" id="2Gf-Tu-L4a">
+                                <rect key="frame" x="76" y="336" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="XtB-ig-A5H"/>
+                        <viewLayoutGuide key="safeArea" id="tcy-Wn-NMg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Njr-g8-G9p"/>
+                    <navigationItem key="navigationItem" id="taj-dv-qtq"/>
+                    <connections>
+                        <outlet property="image" destination="2Gf-Tu-L4a" id="HHh-mQ-reS"/>
+                        <outlet property="texto1" destination="CiZ-Jk-mNL" id="CG5-9q-bLS"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ie7-xb-fZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqI-iJ-0li" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797.709923664122" y="907.74647887323943"/>
+            <point key="canvasLocation" x="1804" y="908"/>
         </scene>
         <!--Birthday View Controller-->
         <scene sceneID="Ivf-vr-kZW">

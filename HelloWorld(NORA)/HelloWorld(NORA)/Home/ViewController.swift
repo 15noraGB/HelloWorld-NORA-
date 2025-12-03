@@ -17,11 +17,12 @@ class ViewController: UIViewController {
     @IBAction func botonCumple(_ sender: UIButton) {
         self.performSegue(withIdentifier: BirthdaySegue, sender: self)
     }
-    
-    @IBAction func botonHelloWorldSegue(_ sender: UIButton) {
+
+    @IBAction func botonHelloWorld(_ sender: UIButton) {
         self.performSegue(withIdentifier: HelloWorldSegue, sender: self)
     }
     
+      
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

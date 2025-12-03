@@ -8,20 +8,25 @@
 import UIKit
 
 class editTextViewController: UIViewController {
+    
+    let ResultText = "resultTextSegue"
 
     @IBOutlet weak var text1: UILabel!
     @IBOutlet weak var textFill: UITextField!
     @IBAction func botonDONE(_ sender: UIButton) {
     }
     
-    let ResultText = "resultTextSegue"
     
-    override func viewDidLoad() {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         text1.text = "Introduce tu nombre"
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if segue.identifier == ResultText {
+            let destino = segue.destination as! resultViewController
+            destino.nombre = textFill.text ?? ""
+        }
     }
+
+    
     
 
     /*
