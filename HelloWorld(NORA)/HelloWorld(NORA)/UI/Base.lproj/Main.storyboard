@@ -39,6 +39,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ShopList"/>
+                                <connections>
+                                    <action selector="botonLista:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AqG-ao-hsd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQP-wo-cDs">
                                 <rect key="frame" x="50" y="383" width="292" height="35"/>
@@ -54,6 +57,7 @@
                     <connections>
                         <segue destination="Crg-dk-HRl" kind="show" identifier="birthdaySegue" id="1ce-Lt-hf3"/>
                         <segue destination="3bB-JT-YiB" kind="show" identifier="helloWorldSegue" id="P3h-00-6TS"/>
+                        <segue destination="lWf-Yl-mMw" kind="show" identifier="shopListSegue" id="TRY-iu-7Rk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -138,6 +142,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqI-iJ-0li" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1803.8167938931297" y="907.74647887323943"/>
+        </scene>
+        <!--ListaCompraViewController-->
+        <scene sceneID="2BB-3F-gH0">
+            <objects>
+                <viewController title="ListaCompraViewController" id="lWf-Yl-mMw" customClass="ListaCompraViewController" customModule="HelloWorld_NORA_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xAb-AH-Ctt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rz2-51-Nlu">
+                                <rect key="frame" x="0.0" y="172" width="393" height="612"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ThA-Iv-xSC">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ThA-Iv-xSC" id="a4S-3y-Yzx">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UcY-B4-GkB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rz2-51-Nlu" firstAttribute="leading" secondItem="UcY-B4-GkB" secondAttribute="leading" id="9uf-Jp-gOa"/>
+                            <constraint firstItem="UcY-B4-GkB" firstAttribute="trailing" secondItem="Rz2-51-Nlu" secondAttribute="trailing" id="nBR-z1-MaU"/>
+                            <constraint firstItem="Rz2-51-Nlu" firstAttribute="top" secondItem="UcY-B4-GkB" secondAttribute="top" id="vDJ-bV-JT3"/>
+                            <constraint firstItem="UcY-B4-GkB" firstAttribute="bottom" secondItem="Rz2-51-Nlu" secondAttribute="bottom" id="zrt-se-XFs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FBj-TT-2p0"/>
+                    <connections>
+                        <outlet property="listaView" destination="Rz2-51-Nlu" id="RQB-oq-xwP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7qh-JT-feI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="908"/>
         </scene>
         <!--Birthday View Controller-->
         <scene sceneID="Ivf-vr-kZW">

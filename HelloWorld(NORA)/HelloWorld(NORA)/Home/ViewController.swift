@@ -21,8 +21,11 @@ class ViewController: UIViewController {
     @IBAction func botonHelloWorld(_ sender: UIButton) {
         self.performSegue(withIdentifier: HelloWorldSegue, sender: self)
     }
+
+    @IBAction func botonLista(_ sender: Any) {
+        self.performSegue(withIdentifier: ShopListSegue, sender: self)
+    }
     
-      
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
