@@ -12,12 +12,38 @@ class ListaCompraViewController: UIViewController {
     
     @IBOutlet weak var listaView: UITableView!
     
+    // 1. Array de elementos de la compra
+    let shopItems = ["Leche", "Pan", "Huevos", "Fruta", "Verduras"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Conectar la tabla con el DataSource
+        listaView.dataSource = self
+    }
+}
 
-        // Do any additional setup after loading the view.
+// 2. Extensión para implementar UITableViewDataSource
+extension ListaCompraViewController: UITableViewDataSource {
+    
+    // Número de secciones
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
+    // Número de filas por sección
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return shopItems.count
+    }
+    
+    // Configuración de la celda
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // El identificador de la celda debe coincidir con el definido en el Storyboard
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = shopItems[indexPath.row]
+        return cell
+    }
+}
 
     /*
     // MARK: - Navigation
@@ -29,4 +55,4 @@ class ListaCompraViewController: UIViewController {
     }
     */
 
-}
+
