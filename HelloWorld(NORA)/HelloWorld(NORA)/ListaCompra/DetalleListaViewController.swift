@@ -9,6 +9,9 @@ import UIKit
 
 class DetalleListaViewController: UIViewController {
 
+    @IBOutlet weak var producto: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
