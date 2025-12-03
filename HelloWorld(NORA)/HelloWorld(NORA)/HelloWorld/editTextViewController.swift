@@ -10,8 +10,28 @@ import UIKit
 class editTextViewController: UIViewController {
     
     let ResultText = "resultTextSegue"
-
-    @IBOutlet weak var text1: UILabel!
+    
+    @IBAction func botonDone(_ sender: Any) {
+        
+        // Comprobar si el campo está vacío o solo con espacios
+                let texto = textFill.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+                
+                if texto.isEmpty {
+                    // Mostrar alerta
+                    let alert = UIAlertController(title: "Campo vacío",
+                                                  message: "Por favor, escribe tu nombre antes de continuar.",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    present(alert, animated: true)
+                    return
+                }
+        
+        self.performSegue(withIdentifier: ResultText, sender: self)
+    }
+    
+    @IBOutlet weak var texto1: UILabel!
+    
+    
     @IBOutlet weak var textFill: UITextField!
     @IBAction func botonDONE(_ sender: UIButton) {
     }
@@ -19,7 +39,7 @@ class editTextViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        text1.text = "Introduce tu nombre"
+        texto1.text = "Introduce tu nombre"
         if segue.identifier == ResultText {
             let destino = segue.destination as! resultViewController
             destino.nombre = textFill.text ?? ""

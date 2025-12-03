@@ -88,6 +88,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="DONE"/>
                                 <connections>
                                     <action selector="botonDONE:" destination="3bB-JT-YiB" eventType="touchUpInside" id="QrV-iI-cnN"/>
+                                    <action selector="botonDone:" destination="3bB-JT-YiB" eventType="touchUpInside" id="ntQ-9H-WLB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,10 +97,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="9E4-WE-klX"/>
                     <connections>
-                        <outlet property="text1" destination="swI-wj-Z1T" id="G86-IH-boq"/>
-                        <outlet property="textField" destination="swI-wj-Z1T" id="V38-Pp-jGJ"/>
-                        <outlet property="textFill" destination="bug-3Y-zUO" id="iuL-RR-wFU"/>
-                        <segue destination="DrF-GU-xMp" kind="show" identifier="resultTextSegue" id="wTH-oO-QKg"/>
+                        <outlet property="textFill" destination="bug-3Y-zUO" id="zeK-Lh-ASa"/>
+                        <outlet property="texto1" destination="swI-wj-Z1T" id="LYL-5Y-PFa"/>
+                        <segue destination="DrF-GU-xMp" kind="show" identifier="resultTextSegue" id="teU-bn-zgw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kze-Ul-ALq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -115,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiZ-Jk-mNL">
-                                <rect key="frame" x="93" y="239" width="42" height="21"/>
+                                <rect key="frame" x="93" y="239" width="249" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqI-iJ-0li" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="908"/>
+            <point key="canvasLocation" x="1803.8167938931297" y="907.74647887323943"/>
         </scene>
         <!--Birthday View Controller-->
         <scene sceneID="Ivf-vr-kZW">

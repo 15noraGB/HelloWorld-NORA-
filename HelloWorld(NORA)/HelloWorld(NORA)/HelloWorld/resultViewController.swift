@@ -17,11 +17,14 @@ class resultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        texto1.text = "Holis! Bienvenido a mi app"
 
-        // Do any additional setup after loading the view.
+        if let nombre = nombre {
+            texto1.text = "Holis \(nombre)! Bienvenido a mi app"
+        } else {
+            texto1.text = "Holis! Bienvenido a mi app"
+        }
     }
-    
+
 
     /*
     // MARK: - Navigation
