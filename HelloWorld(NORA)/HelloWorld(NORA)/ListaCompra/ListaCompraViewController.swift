@@ -1,6 +1,7 @@
 import UIKit
 
 class ListaCompraViewController: UIViewController {
+    
 
     @IBOutlet weak var listaView: UITableView!
     
@@ -12,17 +13,44 @@ class ListaCompraViewController: UIViewController {
         Producto(nombre: "Verduras", cantidad: 9)
     ]
 
-    // Ahora debe guardar un PRODUCTO entero
+    // Producto seleccionado de la lista
     var itemSeleccionado: Producto?
-    
+
+    // Identificadores de segues
+    let AddSegue = "addSegue"
+    let DetalleSegue = "detalleSegue"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         listaView.dataSource = self
         listaView.delegate = self
+        
+        // Botón para añadir producto
+        let addBarBt = UIBarButtonItem(
+            title: String(localized: "Añadir"),
+            style: .plain,
+            target: self,
+            action: #selector(self.addBarBtAction)
+        )
+        self.navigationItem.rightBarButtonItem = addBarBt
+    }
+
+    // Acción del botón "Añadir"
+    @IBAction func addBarBtAction(sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: AddSegue, sender: self)
+    }
+
+    // Preparación para los segues
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == DetalleSegue {
+            let destino = segue.destination as! DetalleListaViewController
+            destino.productoSeleccionado = itemSeleccionado
+        }
     }
 }
 
+// MARK: - UITableViewDataSource & UITableViewDelegate
 extension ListaCompraViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,28 +61,12 @@ extension ListaCompraViewController: UITableViewDataSource, UITableViewDelegate 
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-        // MOSTRAR SOLO EL NOMBRE
         cell.textLabel?.text = shopItems[indexPath.row].nombre
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        // Guardamos el producto completo
         itemSeleccionado = shopItems[indexPath.row]
-        
-        performSegue(withIdentifier: "detalleSegue", sender: self)
-    }
-}
-
-extension ListaCompraViewController {
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detalleSegue" {
-            let destino = segue.destination as! DetalleListaViewController
-            destino.productoSeleccionado = itemSeleccionado   // PASAMOS EL OBJETO ENTERO
-        }
+        performSegue(withIdentifier: DetalleSegue, sender: self)
     }
 }

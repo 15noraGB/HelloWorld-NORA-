@@ -179,6 +179,7 @@
                     <connections>
                         <outlet property="listaView" destination="Rz2-51-Nlu" id="RQB-oq-xwP"/>
                         <segue destination="dJT-DR-o64" kind="show" identifier="detalleSegue" id="V3l-9M-mNH"/>
+                        <segue destination="JHA-mz-1Jx" kind="presentation" identifier="addSegue" id="Aq4-zO-lFM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qh-JT-feI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -219,7 +220,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vS5-rL-vav" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113.74045801526717" y="1593.661971830986"/>
+            <point key="canvasLocation" x="440" y="1643"/>
+        </scene>
+        <!--AñadirProdViewController-->
+        <scene sceneID="bOl-q5-dbQ">
+            <objects>
+                <viewController title="AñadirProdViewController" id="JHA-mz-1Jx" customClass="AnadirProdViewController" customModule="HelloWorld_NORA_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RpD-VL-RWi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLC-f2-5uC">
+                                <rect key="frame" x="61" y="168" width="273" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="texto1:" destination="Nze-zS-zmi" eventType="editingDidEnd" id="T4u-dc-ajg"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cantidad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBL-gk-mhB">
+                                <rect key="frame" x="61" y="245" width="273" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1H-Vh-Kog">
+                                <rect key="frame" x="164" y="320" width="66" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SAVE"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qh5-0U-tbn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="botonSAVE" destination="x1H-Vh-Kog" id="pTh-c5-plf"/>
+                        <outlet property="textoCant" destination="kBL-gk-mhB" id="V0X-i5-ge7"/>
+                        <outlet property="textoProducto" destination="rLC-f2-5uC" id="A9K-7z-U2H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4S-qa-Vad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Nze-zS-zmi" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-332.06106870229007" y="1642.9577464788733"/>
         </scene>
         <!--Birthday View Controller-->
         <scene sceneID="Ivf-vr-kZW">
