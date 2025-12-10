@@ -24,9 +24,6 @@ class AnadirProdViewController: UIViewController {
     
     
     @IBAction func botonSAVE(_ sender: UIButton) {
-        
-        
-        
         guard let nombre = textoProducto.text,
               let cantidadTxt = textoCant.text,
               let cantidad = Int(cantidadTxt),
@@ -35,7 +32,10 @@ class AnadirProdViewController: UIViewController {
         let nuevo = Producto(nombre: nombre, cantidad: cantidad)
         
         delegate?.didAddProduct(nuevo)
-        navigationController?.popViewController(animated: true)
-        
+        dismiss(animated: true) // En vez de popViewController
     }
+
+    
+        
+
 }

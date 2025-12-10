@@ -296,7 +296,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SAVE"/>
                                 <connections>
-                                    <action selector="botonSAVE:" destination="JHA-mz-1Jx" eventType="touchUpInside" id="imv-ds-E2h"/>
+                                    <action selector="botonSAVE:" destination="JHA-mz-1Jx" eventType="touchUpInside" id="q1d-Xt-86j"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -304,7 +304,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="botonSAVE" destination="x1H-Vh-Kog" id="pTh-c5-plf"/>
                         <outlet property="textoCant" destination="kBL-gk-mhB" id="V0X-i5-ge7"/>
                         <outlet property="textoProducto" destination="rLC-f2-5uC" id="A9K-7z-U2H"/>
                     </connections>
