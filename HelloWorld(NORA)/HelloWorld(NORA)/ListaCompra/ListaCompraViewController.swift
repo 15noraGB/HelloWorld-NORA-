@@ -4,10 +4,16 @@ class ListaCompraViewController: UIViewController {
 
     @IBOutlet weak var listaView: UITableView!
     
-    let shopItems = ["Leche", "Pan", "Huevos", "Fruta", "Verduras"]
-    
-    // Variable para guardar qué item se seleccionó
-    var itemSeleccionado: String?
+    var shopItems: [Producto] = [
+        Producto(nombre: "Leche", cantidad: 3),
+        Producto(nombre: "Pan", cantidad: 2),
+        Producto(nombre: "Huevos", cantidad: 12),
+        Producto(nombre: "Fruta", cantidad: 6),
+        Producto(nombre: "Verduras", cantidad: 9)
+    ]
+
+    // Ahora debe guardar un PRODUCTO entero
+    var itemSeleccionado: Producto?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +23,6 @@ class ListaCompraViewController: UIViewController {
     }
 }
 
-// MARK: - Tabla
 extension ListaCompraViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,27 +33,28 @@ extension ListaCompraViewController: UITableViewDataSource, UITableViewDelegate 
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = shopItems[indexPath.row]
+
+        // MOSTRAR SOLO EL NOMBRE
+        cell.textLabel?.text = shopItems[indexPath.row].nombre
+        
         return cell
     }
     
-    // Cuando se toca una fila
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        // Guardamos el producto completo
         itemSeleccionado = shopItems[indexPath.row]
         
-        // Llamamos al segue
         performSegue(withIdentifier: "detalleSegue", sender: self)
     }
 }
 
-// MARK: - Segue → enviar dato al detalle
 extension ListaCompraViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detalleSegue" {
             let destino = segue.destination as! DetalleListaViewController
-            destino.nombreProducto = itemSeleccionado
+            destino.productoSeleccionado = itemSeleccionado   // PASAMOS EL OBJETO ENTERO
         }
     }
 }
