@@ -24,15 +24,24 @@ class AnadirProdViewController: UIViewController {
     
     
     @IBAction func botonSAVE(_ sender: UIButton) {
-        guard let nombre = textoProducto.text,
-              let cantidadTxt = textoCant.text,
-              let cantidad = Int(cantidadTxt),
-              !nombre.isEmpty else { return }
+        guard let nombre = textoProducto.text, !nombre.isEmpty,
+              let cantidadTxt = textoCant.text, !cantidadTxt.isEmpty,
+              let cantidad = Int(cantidadTxt) else {
+            
+            // Mostrar alerta de error
+            let alert = UIAlertController(
+                title: "Error",
+                message: "Por favor, completa todos los campos correctamente.",
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            return
+        }
         
         let nuevo = Producto(nombre: nombre, cantidad: cantidad)
-        
         delegate?.didAddProduct(nuevo)
-        dismiss(animated: true) // En vez de popViewController
+        dismiss(animated: true)
     }
 
     
