@@ -31,6 +31,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func botonConexionRed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: NetworkSegue, sender: self)
+    }
+    
 }
 

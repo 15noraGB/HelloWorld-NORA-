@@ -1,0 +1,14 @@
+//
+//  Post.swift
+//  HelloWorld(NORA)
+//
+//  Created by student on 10/12/25.
+//
+
+import Foundation
+nonisolated struct Post: Codable {
+    let userId: Int
+    let id: Int
+    let title: String
+    let body: String
+}

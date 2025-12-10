@@ -8,6 +8,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Conexion a Red-->
+        <scene sceneID="vKz-66-ntL">
+            <objects>
+                <viewController title="Conexion a Red" id="AG2-WR-cwE" customClass="AlamoPosts" customModule="HelloWorld_NORA_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CIw-pL-6jL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="V60-2X-82z">
+                                <rect key="frame" x="0.0" y="172" width="393" height="612"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" id="mRR-k3-C8v">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mRR-k3-C8v" id="SQ7-vi-m2a">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0jN-on-2sd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0jN-on-2sd" firstAttribute="bottom" secondItem="V60-2X-82z" secondAttribute="bottom" id="Q7P-Sd-Wpb"/>
+                            <constraint firstItem="V60-2X-82z" firstAttribute="leading" secondItem="0jN-on-2sd" secondAttribute="leading" id="Ro2-Ys-Iwd"/>
+                            <constraint firstItem="V60-2X-82z" firstAttribute="top" secondItem="0jN-on-2sd" secondAttribute="top" id="l7c-k9-QFA"/>
+                            <constraint firstItem="0jN-on-2sd" firstAttribute="trailing" secondItem="V60-2X-82z" secondAttribute="trailing" id="mzs-0i-Xlz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hFK-7g-psG"/>
+                    <connections>
+                        <outlet property="tabla" destination="V60-2X-82z" id="5ef-4W-tDV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ti-kr-dTj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2749" y="908"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -48,6 +89,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Network Call"/>
+                                <connections>
+                                    <action selector="botonConexionRed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpM-y4-uYQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -58,6 +102,7 @@
                         <segue destination="Crg-dk-HRl" kind="show" identifier="birthdaySegue" id="1ce-Lt-hf3"/>
                         <segue destination="3bB-JT-YiB" kind="show" identifier="helloWorldSegue" id="P3h-00-6TS"/>
                         <segue destination="lWf-Yl-mMw" kind="show" identifier="shopListSegue" id="TRY-iu-7Rk"/>
+                        <segue destination="AG2-WR-cwE" kind="show" identifier="networkSegue" id="AUq-HV-OZ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
