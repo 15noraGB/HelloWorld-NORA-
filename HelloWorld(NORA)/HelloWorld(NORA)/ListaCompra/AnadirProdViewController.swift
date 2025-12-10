@@ -7,34 +7,35 @@
 
 import UIKit
 
+protocol AnadirProdDelegate: AnyObject {
+    func didAddProduct(_ producto: Producto)
+}
+
 class AnadirProdViewController: UIViewController {
-    
     
     @IBOutlet weak var textoProducto: UITextField!
     @IBOutlet weak var textoCant: UITextField!
-    @IBOutlet weak var botonSAVE: UIButton!
     
+    weak var delegate: AnadirProdDelegate?
     
     override func viewDidLoad() {
-        
-        /*textoProducto.text="Nombre"
-        textoCant.text="Cantidad"*/
-        
-        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func botonSAVE(_ sender: UIButton) {
+        
+        
+        
+        guard let nombre = textoProducto.text,
+              let cantidadTxt = textoCant.text,
+              let cantidad = Int(cantidadTxt),
+              !nombre.isEmpty else { return }
+        
+        let nuevo = Producto(nombre: nombre, cantidad: cantidad)
+        
+        delegate?.didAddProduct(nuevo)
+        navigationController?.popViewController(animated: true)
+        
     }
-    */
-
 }

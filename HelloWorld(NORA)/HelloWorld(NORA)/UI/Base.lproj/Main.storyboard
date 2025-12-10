@@ -179,7 +179,7 @@
                     <connections>
                         <outlet property="listaView" destination="Rz2-51-Nlu" id="RQB-oq-xwP"/>
                         <segue destination="dJT-DR-o64" kind="show" identifier="detalleSegue" id="V3l-9M-mNH"/>
-                        <segue destination="JHA-mz-1Jx" kind="presentation" identifier="addSegue" id="Aq4-zO-lFM"/>
+                        <segue destination="JHA-mz-1Jx" kind="presentation" identifier="añadirProductoSegue" id="Aq4-zO-lFM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qh-JT-feI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -250,6 +250,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SAVE"/>
+                                <connections>
+                                    <action selector="botonSAVE:" destination="JHA-mz-1Jx" eventType="touchUpInside" id="imv-ds-E2h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qh5-0U-tbn"/>

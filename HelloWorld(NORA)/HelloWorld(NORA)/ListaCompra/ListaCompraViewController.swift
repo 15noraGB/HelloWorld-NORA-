@@ -2,7 +2,6 @@ import UIKit
 
 class ListaCompraViewController: UIViewController {
     
-
     @IBOutlet weak var listaView: UITableView!
     
     var shopItems: [Producto] = [
@@ -12,17 +11,17 @@ class ListaCompraViewController: UIViewController {
         Producto(nombre: "Fruta", cantidad: 6),
         Producto(nombre: "Verduras", cantidad: 9)
     ]
-
+    
     // Producto seleccionado de la lista
     var itemSeleccionado: Producto?
-
+    
     // Identificadores de segues
-    let AddSegue = "addSegue"
+    let Añadir = "añadirProductoSegue"
     let DetalleSegue = "detalleSegue"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         listaView.dataSource = self
         listaView.delegate = self
         
@@ -35,22 +34,35 @@ class ListaCompraViewController: UIViewController {
         )
         self.navigationItem.rightBarButtonItem = addBarBt
     }
-
+    
     // Acción del botón "Añadir"
+    
     @IBAction func addBarBtAction(sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: AddSegue, sender: self)
+        self.performSegue(withIdentifier: Añadir, sender: self)
     }
-
+    
     // Preparación para los segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == DetalleSegue {
             let destino = segue.destination as! DetalleListaViewController
             destino.productoSeleccionado = itemSeleccionado
         }
+        else if segue.identifier == Añadir {
+            let destino = segue.destination as! AnadirProdViewController
+            destino.delegate = self
+        }
     }
 }
 
-// MARK: - UITableViewDataSource & UITableViewDelegate
+// MARK: - Delegate de añadir producto
+extension ListaCompraViewController: AnadirProdDelegate {
+    func didAddProduct(_ producto: Producto) {
+        shopItems.append(producto)
+        listaView.reloadData()
+    }
+}
+
+// MARK: - TableView
 extension ListaCompraViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
