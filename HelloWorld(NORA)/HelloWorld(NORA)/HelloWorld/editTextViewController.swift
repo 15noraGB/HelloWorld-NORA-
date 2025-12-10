@@ -11,6 +11,7 @@ class editTextViewController: UIViewController {
     
     let ResultText = "resultTextSegue"
     
+    
     @IBAction func botonDone(_ sender: Any) {
         
         // Comprobar si el campo está vacío o solo con espacios
