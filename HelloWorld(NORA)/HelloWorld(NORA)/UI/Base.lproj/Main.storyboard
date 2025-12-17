@@ -230,17 +230,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tJ-3Y-l1o">
-                                                    <rect key="frame" x="52" y="15" width="321" height="22"/>
+                                                    <rect key="frame" x="29" y="15" width="353" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="8tJ-3Y-l1o" firstAttribute="leading" secondItem="a4S-3y-Yzx" secondAttribute="leadingMargin" constant="32" id="Ebt-tr-udn"/>
-                                                <constraint firstItem="8tJ-3Y-l1o" firstAttribute="top" secondItem="a4S-3y-Yzx" secondAttribute="topMargin" id="TzI-Lv-EdK"/>
-                                                <constraint firstItem="8tJ-3Y-l1o" firstAttribute="bottom" secondItem="a4S-3y-Yzx" secondAttribute="bottomMargin" id="Yu7-ea-X9h"/>
-                                                <constraint firstItem="8tJ-3Y-l1o" firstAttribute="trailing" secondItem="a4S-3y-Yzx" secondAttribute="trailingMargin" id="okV-BR-FYX"/>
+                                                <constraint firstItem="8tJ-3Y-l1o" firstAttribute="trailing" secondItem="a4S-3y-Yzx" secondAttribute="trailingMargin" constant="9" id="Aob-yu-RzQ"/>
+                                                <constraint firstItem="8tJ-3Y-l1o" firstAttribute="leading" secondItem="a4S-3y-Yzx" secondAttribute="leadingMargin" constant="9" id="Mm9-bv-e3h"/>
+                                                <constraint firstAttribute="bottom" secondItem="8tJ-3Y-l1o" secondAttribute="bottom" constant="16" id="lWM-Ce-iN5"/>
+                                                <constraint firstItem="8tJ-3Y-l1o" firstAttribute="top" secondItem="a4S-3y-Yzx" secondAttribute="top" constant="15" id="uzN-6o-xaS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
