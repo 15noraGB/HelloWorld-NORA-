@@ -222,13 +222,31 @@
                                 <rect key="frame" x="0.0" y="172" width="393" height="612"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="ThA-Iv-xSC">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="51"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShopItemCell" id="ThA-Iv-xSC" customClass="ShopItemTableViewCell" customModule="HelloWorld_NORA_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ThA-Iv-xSC" id="a4S-3y-Yzx">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="51"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tJ-3Y-l1o">
+                                                    <rect key="frame" x="52" y="15" width="321" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8tJ-3Y-l1o" firstAttribute="leading" secondItem="a4S-3y-Yzx" secondAttribute="leadingMargin" constant="32" id="Ebt-tr-udn"/>
+                                                <constraint firstItem="8tJ-3Y-l1o" firstAttribute="top" secondItem="a4S-3y-Yzx" secondAttribute="topMargin" id="TzI-Lv-EdK"/>
+                                                <constraint firstItem="8tJ-3Y-l1o" firstAttribute="bottom" secondItem="a4S-3y-Yzx" secondAttribute="bottomMargin" id="Yu7-ea-X9h"/>
+                                                <constraint firstItem="8tJ-3Y-l1o" firstAttribute="trailing" secondItem="a4S-3y-Yzx" secondAttribute="trailingMargin" id="okV-BR-FYX"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cantidadLabel" destination="8tJ-3Y-l1o" id="7h8-VZ-f9u"/>
+                                            <outlet property="nombreLabel" destination="8tJ-3Y-l1o" id="aJo-vJ-ZLw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -251,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qh-JT-feI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="908"/>
+            <point key="canvasLocation" x="113.74045801526717" y="907.74647887323943"/>
         </scene>
         <!--DetalleListaViewController-->
         <scene sceneID="jqq-As-hOv">

@@ -73,9 +73,15 @@ extension ListaCompraViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = shopItems[indexPath.row].nombre
+
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "ShopItemCell",
+            for: indexPath
+        ) as! ShopItemTableViewCell
+
+        let producto = shopItems[indexPath.row]
+        cell.configurar(producto: producto)
+
         return cell
     }
     
