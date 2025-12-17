@@ -38,9 +38,10 @@ class ListaCompraViewController: UIViewController {
     // Acción del botón "Añadir"
     var addBarBt: UIBarButtonItem!
     
-    @IBAction func addBarBtAction(sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: Añadir, sender: self)
+    @objc func addBarBtAction() {
+        performSegue(withIdentifier: Añadir, sender: self)
     }
+
     
     // Preparación para los segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
