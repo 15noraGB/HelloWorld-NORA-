@@ -335,33 +335,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoTarta" translatesAutoresizingMaskIntoConstraints="NO" id="wdj-vf-UDb">
+                                <rect key="frame" x="96" y="252" width="200" height="200"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28Q-o3-pXs">
-                                <rect key="frame" x="140.66666666666666" y="491" width="112" height="55"/>
+                                <rect key="frame" x="51" y="491" width="291" height="54.666666666666742"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGF-9g-1XD">
-                                <rect key="frame" x="180" y="554" width="33.333333333333343" height="28"/>
+                                <rect key="frame" x="180" y="561" width="33.333333333333343" height="28"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fotoTarta" translatesAutoresizingMaskIntoConstraints="NO" id="wdj-vf-UDb">
-                                <rect key="frame" x="96" y="252" width="200" height="200"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fwp-1B-WUm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wdj-vf-UDb" firstAttribute="top" secondItem="fwp-1B-WUm" secondAttribute="top" constant="80" id="5Wn-Ia-vWo"/>
+                            <constraint firstItem="fwp-1B-WUm" firstAttribute="bottom" secondItem="wdj-vf-UDb" secondAttribute="bottom" constant="332" id="8cw-xY-rdC"/>
                             <constraint firstItem="wdj-vf-UDb" firstAttribute="leading" secondItem="fwp-1B-WUm" secondAttribute="leading" constant="96" id="C1W-dd-nUj"/>
-                            <constraint firstItem="JGF-9g-1XD" firstAttribute="top" secondItem="28Q-o3-pXs" secondAttribute="bottom" constant="8" id="Sad-IE-6nX"/>
                             <constraint firstItem="JGF-9g-1XD" firstAttribute="centerX" secondItem="RFa-Ow-2XD" secondAttribute="centerX" id="UDo-eL-OkU"/>
-                            <constraint firstItem="fwp-1B-WUm" firstAttribute="bottom" secondItem="wdj-vf-UDb" secondAttribute="bottom" constant="332" id="WSR-kr-0hr"/>
-                            <constraint firstItem="28Q-o3-pXs" firstAttribute="top" secondItem="wdj-vf-UDb" secondAttribute="bottom" constant="39" id="cWh-4A-byo"/>
-                            <constraint firstItem="JGF-9g-1XD" firstAttribute="centerX" secondItem="28Q-o3-pXs" secondAttribute="centerX" id="giM-BL-ZSJ"/>
+                            <constraint firstItem="fwp-1B-WUm" firstAttribute="trailing" secondItem="28Q-o3-pXs" secondAttribute="trailing" constant="51" id="Zk7-mj-D18"/>
+                            <constraint firstItem="fwp-1B-WUm" firstAttribute="bottom" secondItem="JGF-9g-1XD" secondAttribute="bottom" constant="195" id="enn-Lx-Ngw"/>
+                            <constraint firstItem="JGF-9g-1XD" firstAttribute="top" secondItem="28Q-o3-pXs" secondAttribute="bottom" constant="15.33" id="ggn-EP-5hs"/>
                             <constraint firstItem="fwp-1B-WUm" firstAttribute="trailing" secondItem="wdj-vf-UDb" secondAttribute="trailing" constant="97" id="i3f-Ga-8WL"/>
+                            <constraint firstItem="28Q-o3-pXs" firstAttribute="leading" secondItem="fwp-1B-WUm" secondAttribute="leading" constant="51" id="zxw-IC-YQo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S84-2K-9J8"/>
